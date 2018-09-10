@@ -17,7 +17,15 @@ app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
 
 
+var path = require('path');
+const port = process.env.PORT || 3000;
 
+
+
+
+
+
+app.get('/', () => {});
 
 // GET method route
 app.get('/blog/get', function (req, res) {
@@ -107,6 +115,6 @@ app.get('/blog/get', function (req, res) {
 
   });
 
-app.listen(3000, function () {
+app.listen(port, function () {
   console.log('Application listening on port 3000!');
 });
